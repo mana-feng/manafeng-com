@@ -85,8 +85,8 @@ ignore:
 # Extensions
 theme: fluid
 
-# Deployment
-deploy:
-  type: git
-  repo: git@github.com:manafeng/manafeng.github.io.git
-  branch: main
+# Deployment (handled by GitHub Actions)
+# deploy:
+#   type: git
+#   repo: git@github.com:manafeng/manafeng.github.io.git
+#   branch: main
