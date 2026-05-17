@@ -1,0 +1,11 @@
+.banner {
+  background-size: 100% auto !important;
+  background-position: center top !important;
+  background-attachment: fixed !important;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    background-attachment: scroll !important;
+  }
+}
