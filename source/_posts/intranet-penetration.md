@@ -58,3 +58,82 @@ server {
     return 301 https://$host$request_uri;
 }</code></pre><p>3、测试并重启nginx</p><pre><code>sudo nginx -t
 sudo systemctl restart nginx</code></pre><h1 id="heading-10">总结</h1><p>以上就是一套完整的基于Orange Pi + Halo + natapp + nginx + SSL的内网穿透建站方案</p><p>整体成本极低，适合个人博客、测试站点等场景</p><p>当然，如果网站流量较大或者对稳定性要求较高，还是建议购买正规的云服务器</p>
+
+
+<h1 id="heading-11">GitHub Pages 纯静态网站搭建</h1>
+<p>除了使用 Orange Pi 自建服务器外，GitHub Pages 也是一个非常不错的选择，特别适合托管纯静态网站</p>
+<p>GitHub Pages 完全免费，无需维护服务器，且自带 CDN 加速，适合个人博客、文档站点、项目展示等场景</p>
+<p>↓</p>
+
+<h2 id="heading-12">创建仓库</h2>
+<p>1、登录 GitHub，点击右上角 "+" 号，选择 "New repository"</p>
+<p>2、仓库名称格式为 <code>username.github.io</code>，其中 username 为你的 GitHub 用户名</p>
+<p>3、选择公开仓库（Public），然后点击创建</p>
+<p>↓</p>
+
+<h2 id="heading-13">上传网站文件</h2>
+<p>可以通过以下两种方式上传静态网站文件：</p>
+<p>方式一：直接上传</p>
+<ol>
+<li>进入仓库页面，点击 "Add file" → "Upload files"</li>
+<li>拖拽或选择本地的 HTML/CSS/JS 文件上传</li>
+<li>点击 "Commit changes" 提交</li>
+</ol>
+<p>方式二：使用 Git 命令行</p>
+<pre><code># 克隆仓库到本地
+git clone https://github.com/username/username.github.io.git
+
+# 进入仓库目录
+cd username.github.io
+
+# 添加你的静态网站文件（如 index.html）
+# 然后提交并推送
+git add .
+git commit -m "Initial commit"
+git push origin main</code></pre>
+<p>↓</p>
+
+<h2 id="heading-14">启用 GitHub Pages</h2>
+<p>1、进入仓库的 "Settings" 页面</p>
+<p>2、左侧菜单选择 "Pages"</p>
+<p>3、在 "Source" 部分，选择分支（通常为 main 或 master），文件夹选择 "/ (root)"</p>
+<p>4、点击 "Save" 保存</p>
+<p>5、等待几分钟后，访问 <code>https://username.github.io</code> 即可看到你的网站</p>
+<p>↓</p>
+
+<h2 id="heading-15">自定义域名（可选）</h2>
+<p>如果你有自己的域名，可以绑定到 GitHub Pages：</p>
+<ol>
+<li>在仓库根目录创建名为 <code>CNAME</code> 的文件，内容为你的域名（如 <code>www.example.com</code>）</li>
+<li>在你的域名 DNS 服务商处添加 CNAME 记录，指向 <code>username.github.io</code></li>
+<li>在 GitHub Pages 设置中，勾选 "Enforce HTTPS" 以启用 SSL</li>
+</ol>
+<p>↓</p>
+
+<h2 id="heading-16">使用 Hexo/Hugo 等静态网站生成器</h2>
+<p>对于博客类网站，推荐使用静态网站生成器：</p>
+<p>以 Hexo 为例：</p>
+<pre><code># 安装 Hexo
+npm install -g hexo-cli
+
+# 初始化博客
+hexo init blog
+cd blog
+npm install
+
+# 创建新文章
+hexo new "Hello World"
+
+# 生成本地预览
+hexo server
+
+# 生成静态文件
+hexo generate
+
+# 部署到 GitHub Pages（需配置 _config.yml 中的 deploy 部分）
+hexo deploy</code></pre>
+<p>Hexo 和 Hugo 都提供了丰富的主题，可以快速搭建美观的博客站点</p>
+<p>↓</p>
+
+<p>GitHub Pages 方案的优势在于零成本、高可用、无需维护，但仅支持静态内容，无法运行动态程序</p>
+<p>如果需要动态功能（如评论、搜索），可以配合 GitHub Issues、Giscus、Algolia 等第三方服务实现</p>

@@ -1018,6 +1018,25 @@ links:
   # 友链的成员项
   # Member item of page
   items:
+
+    - {
+      title: "fuckyoukaggle.manafeng.com",
+      intro: "Fuck You Kaggle",
+      link: "https://fuckyoukaggle.manafeng.com/",
+      avatar: "/images/F.png"
+    }
+    - {
+      title: "xuan.manafeng.com",
+      intro: "玄学网站",
+      link: "https://xuan.manafeng.com/",
+      avatar: "/images/F.png"
+    }
+    - {
+      title: "fake DogHouse",
+      intro: "继承二狗遗志，新的 tg 交流群",
+      link: "https://t.me/+SraQAegYUeIxNTc1",
+      avatar: "/images/F.png"
+    }
     - {
       title: "smileat.me",
       intro: "二狗的个人网站",
@@ -1025,8 +1044,8 @@ links:
       avatar: "/images/doghouse.jpg"
     }
     - {
-      title: "Telegram",
-      intro: "二狗的tg交流群组",
+      title: "DogHouse",
+      intro: "二狗的tg交流群，但是二狗的 tg 账号预计在 2026/5.24 日删除，群组可能会被解散",
       link: "https://t.me/joinchat/b04cfhBnTWA1NGY9",
       avatar: "/images/doghouse.jpg"
     }
