@@ -1027,25 +1027,14 @@ links:
     }
     - {
       title: "xuan.manafeng.com",
-      intro: "玄学网站",
+      intro: "玄学排盘网站",
       link: "https://xuan.manafeng.com/",
       avatar: "/images/F.png"
     }
-    - {
-      title: "fake DogHouse",
-      intro: "继承二狗遗志，新的 tg 交流群",
-      link: "https://t.me/+SraQAegYUeIxNTc1",
-      avatar: "/images/F.png"
-    }
-    - {
-      title: "smileat.me",
-      intro: "二狗的个人网站",
-      link: "https://smileat.me/",
-      avatar: "/images/doghouse.jpg"
-    }
+
     - {
       title: "DogHouse",
-      intro: "二狗的tg交流群，但是二狗的 tg 账号预计在 2026/5.24 日删除，群组可能会被解散",
+      intro: "tg交流群",
       link: "https://t.me/joinchat/b04cfhBnTWA1NGY9",
       avatar: "/images/doghouse.jpg"
     }
