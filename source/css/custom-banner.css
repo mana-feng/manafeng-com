@@ -1,5 +1,6 @@
+/* banner 统一显示：cover 保证任何屏幕比例下铺满无露白，桌面端固定背景产生视差 */
 .banner {
-  background-size: 100% auto !important;
+  background-size: cover !important;
   background-position: center top !important;
   background-attachment: fixed !important;
 }

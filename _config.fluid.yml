@@ -234,11 +234,13 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - /js/category-filter.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
   - /css/custom-banner.css
+  - /css/category-filter.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -350,7 +352,7 @@ lazyload:
 
 # 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
-iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
+iconfont: /lib/iconfont-social/iconfont.css
 
 
 #---------------------------
@@ -384,7 +386,6 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
     - { key: "github", link: "https://github.com/mana-feng", icon: "iconfont icon-github-fill", target: "_blank" }
@@ -570,7 +571,7 @@ index:
 #---------------------------
 post:
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 70
+  banner_img_height: 60
   banner_mask_alpha: 0.3
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
@@ -956,7 +957,7 @@ category:
 tag:
   enable: true
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 80
+  banner_img_height: 60
   banner_mask_alpha: 0.3
   tagcloud:
     min_font: 15
@@ -1001,7 +1002,7 @@ page:
 page404:
   enable: true
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 85
+  banner_img_height: 60
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
   # Delay in redirecting to home page (milliseconds)
@@ -1014,15 +1015,18 @@ page404:
 #---------------------------
 links:
   enable: true
+  banner_img: /images/FRAILGE.jpeg
+  banner_img_height: 60
+  banner_mask_alpha: 0.3
 
   # 友链的成员项
   # Member item of page
   items:
 
     - {
-      title: "fuckyoukaggle.manafeng.com",
-      intro: "Fuck You Kaggle",
-      link: "https://fuckyoukaggle.manafeng.com/",
+      title: "adhd-learn.manafeng.com",
+      intro: "ADHD 学习网站",
+      link: "https://adhd-learn.manafeng.com/",
       avatar: "/images/F.png"
     }
     - {
@@ -1064,9 +1068,13 @@ links:
 # 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
 # ** 如果你不知道如何设置，请不要做任何改动 **
 #
+# 站点实际会加载的库全部自托管在 source/lib/ 下，不依赖公共 CDN，
+# 以避免海外访问慢、CDN 单点故障与第三方投毒风险。
+# 仍指向 CDN 的几项对应的是当前未启用的功能（数学公式、流程图、评论、访问统计），
+# 若日后启用，需要先把对应库下载到 source/lib/ 再改成本地路径。
+#
 # Here is the url prefix to configure the static assets. Set CDN addresses you want to customize.
 # Be aware that you would better use the same version as default ones to avoid potential problems.
-# DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
 #---------------------------
 
 static_prefix:
@@ -1076,31 +1084,35 @@ static_prefix:
   internal_css: /css
   internal_img: /img
 
-  anchor: https://lib.baomitu.com/anchor-js/5.0.0/
+  # 以下为自托管，对应 source/lib/ 目录
+  # Self-hosted, see source/lib/
+  anchor: /lib/anchor/
 
-  github_markdown: https://lib.baomitu.com/github-markdown-css/4.0.0/
+  github_markdown: /lib/github-markdown/
 
-  jquery: https://lib.baomitu.com/jquery/3.6.4/
+  jquery: /lib/jquery/
 
-  bootstrap: https://lib.baomitu.com/twitter-bootstrap/4.6.1/
+  bootstrap: /lib/bootstrap/
 
+  tocbot: /lib/tocbot/
+
+  typed: /lib/typed/
+
+  fancybox: /lib/fancybox/
+
+  nprogress: /lib/nprogress/
+
+  clipboard: /lib/clipboard/
+
+  # 以下功能当前未启用，保持 CDN 地址
+  # The following features are disabled, keep CDN
   prismjs: https://lib.baomitu.com/prism/1.29.0/
-
-  tocbot: https://lib.baomitu.com/tocbot/4.20.1/
-
-  typed: https://lib.baomitu.com/typed.js/2.0.12/
-
-  fancybox: https://lib.baomitu.com/fancybox/3.5.7/
-
-  nprogress: https://lib.baomitu.com/nprogress/0.2.0/
 
   mathjax: https://lib.baomitu.com/mathjax/3.2.2/
 
   katex: https://lib.baomitu.com/KaTeX/0.16.2/
 
   busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
-
-  clipboard: https://lib.baomitu.com/clipboard.js/2.0.11/
 
   mermaid: https://lib.baomitu.com/mermaid/8.14.0/
 
@@ -1116,6 +1128,6 @@ static_prefix:
 
   discuss: https://lib.baomitu.com/discuss/1.2.1/
 
-  hint: https://lib.baomitu.com/hint.css/2.7.0/
+  hint: /lib/hint/
 
-  moment: https://lib.baomitu.com/moment.js/2.29.4/
+  moment: /lib/moment/

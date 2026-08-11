@@ -1,0 +1,71 @@
+/* 首页右侧分类筛选框 */
+#category-filter {
+  background: var(--board-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--line-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s ease-in-out;
+}
+
+.category-filter-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--sec-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.category-filter-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.category-filter-item {
+  border: 1px solid var(--line-color);
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  padding: 0.1rem 0.65rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.category-filter-item:hover {
+  background: var(--button-hover-bg-color);
+}
+
+.category-filter-item.active {
+  background: var(--navbar-bg-color);
+  border-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+/* 宽屏：悬浮在页面右侧 */
+@media (min-width: 1300px) {
+  #category-filter {
+    position: fixed;
+    top: 45%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 11rem;
+    z-index: 10;
+  }
+  .category-filter-items {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .category-filter-item {
+    text-align: left;
+  }
+}
+
+/* 窄屏：置于文章列表顶部 */
+@media (max-width: 1299.98px) {
+  #category-filter {
+    margin: 0 auto 1rem;
+  }
+}

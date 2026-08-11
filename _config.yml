@@ -4,9 +4,9 @@
 
 # Site
 title: ManaFeng
-subtitle: ''
-description: ''
-keywords:
+subtitle: 'manafeng-从入门到放弃入门'
+description: 'manafeng 的个人博客：技术教程与玄学入门的学习笔记，涵盖内网穿透、接触式磁卡（SLE4442/4428）、小六壬、六爻等内容，从入门到放弃入门。'
+keywords: 'manafeng,技术教程,玄学入门,小六壬,六爻,SLE4442,内网穿透,接触式磁卡'
 author: ManaFeng
 language: zh-CN
 timezone: Asia/Shanghai
