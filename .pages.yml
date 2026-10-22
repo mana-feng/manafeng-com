@@ -1,0 +1,81 @@
+# Pages CMS edits the source files; Hexo and GitHub Actions still publish the site.
+media:
+  - name: images
+    label: 图片
+    input: source/images
+    output: /images
+    extensions: [jpg, jpeg, png, gif, webp, svg, avif]
+    rename: false
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: source/_posts
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    operations:
+      create: true
+      rename: false
+      delete: false
+    view:
+      fields: [title, date, categories, tags]
+      primary: title
+      sort: [date, title]
+      search: [title, categories, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        readonly: true
+        options:
+          time: true
+          format: yyyy-MM-dd HH:mm:ss
+        description: 新文章自动填写当前日期；现有文章的日期只读，避免改变文章地址。
+      - name: categories
+        label: 分类
+        type: string
+        required: true
+        list:
+          min: 1
+          max: 1
+          collapsible: false
+        description: 填写一个分类，例如技术教程、玄学入门或杂记。也可以填写新分类，网站会自动生成对应导航。
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+        description: 每项填写一个标签，可以增加或移除，例如六爻、读卡器、内网穿透。
+      - name: index_img
+        label: 列表封面（可选）
+        type: image
+        options:
+          media: images
+          rename: false
+      - name: body
+        label: 正文原文
+        type: code
+        options:
+          format: markdown
+        description: 保留现有 HTML 和 Markdown；只调整分类、标签时，无需修改这里。图片从「图片」中上传后使用 /images/文件名 引用。
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "content: add {path}"
+      update: "content: update {path}"
+      delete: "content: remove {path}"
+      rename: "content: rename {oldPath} to {newPath}"

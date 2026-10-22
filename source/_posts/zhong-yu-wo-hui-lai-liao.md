@@ -4,7 +4,8 @@ permalink: ''
 tags:
   - 澳洲
 excerpt: ''
-categories: 杂记
+categories:
+  - 杂记
 date: 2025-09-28 21:35:55
 updated: 2026-05-21 23:24:40
 ---
