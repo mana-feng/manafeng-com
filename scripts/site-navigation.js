@@ -8,6 +8,28 @@ hexo.extend.filter.register('theme_inject', function (injects) {
   injects.postMarkdownBegin.file('mobile-toc', 'layout/mobile-toc.ejs', {}, { cache: false });
 });
 
+// Earlier UTC builds published two posts under the previous calendar day.
+hexo.extend.generator.register('legacy-article-dates', function () {
+  const aliases = [
+    ['2023/02/24/liu-yao-ru-men/', '2023/02/25/liu-yao-ru-men/'],
+    ['2023/02/05/metaphysics-basics/', '2023/02/06/metaphysics-basics/']
+  ];
+  const root = hexo.config.root || '/';
+  return aliases.map(([from, to]) => {
+    const target = root + to;
+    const canonical = new URL(target, hexo.config.url).href;
+    return {
+      path: from + 'index.html',
+      data: `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>继续阅读 - ManaFeng</title><link rel="canonical" href="${escapeHTML(canonical)}">
+<script>location.replace(${JSON.stringify(target)}+location.search+location.hash);</script>
+<noscript><meta http-equiv="refresh" content="0;url=${escapeHTML(target)}"></noscript></head>
+<body><p>文章地址已整理，<a href="${escapeHTML(target)}">继续阅读原文</a>。</p></body></html>`
+    };
+  });
+});
+
 // Preserve old category/tag bookmarks after consolidating the taxonomy.
 hexo.extend.generator.register('legacy-navigation', function () {
   const aliases = [
