@@ -1,4 +1,5 @@
 hexo.extend.filter.register('theme_inject', function(injects) {
+  if (process.env.LOCAL_CONTENT_ADMIN === '1') return;
   injects.bodyEnd.raw('statcounter', `
 <script type="text/javascript">
 var sc_project=12919063;

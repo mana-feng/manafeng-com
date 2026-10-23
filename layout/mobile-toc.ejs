@@ -1,0 +1,8 @@
+<% if (theme.post.toc.enable && page.toc !== false) {
+  var mobileToc = toc(page.content, { class: 'mobile-toc-list', list_number: false });
+  if (mobileToc) { %>
+<details class="mobile-toc">
+  <summary>文章目录</summary>
+  <nav aria-label="本篇文章目录"><%- mobileToc %></nav>
+</details>
+<% } } %>

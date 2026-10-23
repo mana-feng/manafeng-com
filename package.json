@@ -6,10 +6,17 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server --ip 127.0.0.1",
+    "admin": "node tools/local-admin/start.cjs",
+    "test": "node --test",
+    "check": "hexo clean && hexo generate && node --test"
   },
   "hexo": {
-    "version": "8.1.1"
+    "version": "8.1.2"
+  },
+  "devDependencies": {
+    "js-yaml": "4.1.1",
+    "jsdom": "25.0.1"
   },
   "dependencies": {
     "hexo": "^8.0.0",

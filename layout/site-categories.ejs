@@ -1,0 +1,15 @@
+<% if (is_home() || is_archive() || is_category() || is_tag() || page.layout === 'categories' || page.layout === 'tags') { %>
+<nav class="site-category-nav" aria-label="文章分类">
+  <div class="site-category-nav-inner">
+    <div class="site-category-heading">
+      <span>文章分类</span><small>选择分类，浏览全部相关文章</small>
+    </div>
+    <ul>
+      <li><a href="<%= url_for('/') %>#board" data-category="" data-count="<%= site.posts.length %>"<% if (is_home()) { %> aria-current="page"<% } %>>全部文章 <span><%= site.posts.length %></span></a></li>
+      <% site.categories.filter(cat => !cat.parent && cat.length).sort('-length').each(function (cat) { %>
+      <li><a href="<%= url_for(cat.path) %>#board" data-category="<%= cat.name %>" data-count="<%= cat.length %>"<% if (page.category === cat.name) { %> aria-current="page"<% } %>><%= cat.name %> <span><%= cat.length %></span></a></li>
+      <% }) %>
+    </ul>
+  </div>
+</nav>
+<% } %>

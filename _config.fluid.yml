@@ -234,13 +234,13 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
-  - /js/category-filter.js
+  - /js/site-ui.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
   - /css/custom-banner.css
-  - /css/category-filter.css
+  - /css/site-ui.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -386,6 +386,7 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
     - { key: "github", link: "https://github.com/mana-feng", icon: "iconfont icon-github-fill", target: "_blank" }
@@ -503,7 +504,7 @@ index:
   # 头图高度，屏幕百分比
   # Height ratio of banner image
   # Available: 0 - 100
-  banner_img_height: 100
+  banner_img_height: 40
 
   # 头图黑色蒙版的不透明度，available: 0 - 1.0，1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
@@ -571,8 +572,13 @@ index:
 #---------------------------
 post:
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 60
+  banner_img_height: 32
   banner_mask_alpha: 0.3
+
+  # 保留作者和日期，隐藏文章底部的许可协议项。
+  copyright:
+    enable: true
+    license: ''
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
@@ -646,7 +652,7 @@ post:
 
     # 开启后，只有在文章 Front-matter 里指定 `category_bar: true` 才会展示分类，也可以通过 `category_bar: ["分类A"]` 来指定分类
     # If true, only set `category_bar: true` in Front-matter will enable sidebar of category, also set `category_bar: ["CategoryA"]` to specify categories
-    specific: true
+    specific: false
 
     # 置于板块的左侧或右侧
     # place in the board
@@ -691,7 +697,7 @@ post:
   # 文章图片标题
   # Image caption
   image_caption:
-    enable: true
+    enable: false
 
   # 文章图片可点击放大
   # Zoom feature of images
@@ -917,7 +923,7 @@ discuss:
 #---------------------------
 archive:
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 60
+  banner_img_height: 32
   banner_mask_alpha: 0.3
 
 
@@ -928,7 +934,7 @@ archive:
 category:
   enable: true
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 60
+  banner_img_height: 32
   banner_mask_alpha: 0.3
 
   # 分类的排序字段，前面带减号是倒序，不带减号是正序
@@ -957,7 +963,7 @@ category:
 tag:
   enable: true
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 60
+  banner_img_height: 32
   banner_mask_alpha: 0.3
   tagcloud:
     min_font: 15
@@ -1016,7 +1022,7 @@ page404:
 links:
   enable: true
   banner_img: /images/FRAILGE.jpeg
-  banner_img_height: 60
+  banner_img_height: 32
   banner_mask_alpha: 0.3
 
   # 友链的成员项
