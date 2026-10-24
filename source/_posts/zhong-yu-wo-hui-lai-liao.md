@@ -32,6 +32,22 @@ updated: 2026-05-21 23:24:40
 
 大概过了半个小时，家里给我打来了视频电话，和父母聊了半个小时，突然意识到自己已经出国了，现在我在的地方是国外。记忆在这个时刻好像出现了断层，前一秒人还在国内，为了挤个绿皮火车东奔西跑，下一秒人就在国外了，到处都是英语，到处都是白人。不得不说，澳洲的白人说的英语是真的难懂，澳洲方言偏的程度，就好像普通话对粤语，快而且很多词的发音方式也都完全不一样，澳洲英语和印度英语其实都可以单开一课，各教各的。
 
+<figure class="travel-photo" id="travel-arrival-photo">
+  <img src="/images/travel-sydney/sydney-opera-house-night.jpg" alt="夜色中亮着灯的悉尼歌剧院，前方是海面" width="1706" height="1279" loading="lazy" decoding="async">
+  <figcaption class="image-caption">夜里的悉尼歌剧院。</figcaption>
+</figure>
+
+<div class="travel-photo-grid" id="travel-harbour-photos">
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/sydney-harbour-bridge-night.jpg" alt="傍晚亮起灯的悉尼海港大桥，前景是树木和沿岸路灯" width="1706" height="1279" loading="lazy" decoding="async">
+    <figcaption class="image-caption">傍晚的悉尼海港大桥。</figcaption>
+  </figure>
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/harbour-city-night.jpg" alt="夜色中的码头、渡轮和亮着灯的城市高楼" width="1706" height="1279" loading="lazy" decoding="async">
+    <figcaption class="image-caption">海港边的城市夜景。</figcaption>
+  </figure>
+</div>
+
 <h2 id="%E4%BD%8F%E5%A4%84">住处</h2>
 
 <h3 id="arrival-settling-in">落地后的饮食与安顿</h3>
@@ -41,6 +57,17 @@ updated: 2026-05-21 23:24:40
 这边有个专门做中国人生意的外卖平台，叫做“熊猫外卖”，20刀一份的猪排饭，我当时点了一份，拿到手的时候看见一碗米饭上面两片猪肉，愣了几秒后我甚至怀疑是不是和下水道里面的潲水装混了......就这样靠着外卖和面包坚持了大概一个星期左右，买的锅到了。
 
 拿到手之后，发现自己实在也不会做什么饭，以前也没有任何做饭的经验，于是只能天天煮泡面，好点的时候就里面加两个鸡腿一起煮。但是这样吃是真的愁，生活质量下降的太多导致我的头发一个星期里就白了一半。不过还好，后面翻着小红书和熊猫外卖里面的亚超，最终把油盐酱醋都找齐了，做饭的方法也学会了，生活也算是走上正轨了。
+
+<div class="travel-photo-grid" id="travel-street-photos">
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/pedestrian-crossing-button.jpg" alt="路口灯杆上的行人过街按钮，旁边是施工围栏" width="1080" height="1920" loading="lazy" decoding="async">
+    <figcaption class="image-caption">路口的行人过街按钮。</figcaption>
+  </figure>
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/shared-walking-cycling-path.jpg" alt="步道上画着双向的行人和自行车标识" width="1080" height="1920" loading="lazy" decoding="async">
+    <figcaption class="image-caption">步道上的行人与自行车标识。</figcaption>
+  </figure>
+</div>
 
 当然，虽然上面写的好像落了地我就直接稳妥地进入了宿舍，然后安顿了下来，但是实际上的过程并没有那么轻松。
 
@@ -71,6 +98,11 @@ updated: 2026-05-21 23:24:40
 ↑几乎就是这么恶心，一是为了钱；二是洋大人得罪不起，但是初到国外语言不流利没有后台的留学生得罪得起。于是留学生几乎成为中国中介眼中的一块肥肉，想要荤腥了就来两刀。
 
 > ps：还有句题外话，但是是我的臆想。异乡好居的背后其实是新东方在投资，当然.......是那个教英语的新东方，不是教做饭的新东方。在之前我被异乡好居强不给合同强要定金的时候，我就在想，会不会是新东方因为被政府关闭了中小学的教辅损失了太多钱，于是开始变着方法地报复社会了。
+
+<figure class="travel-photo" id="travel-tower-photo">
+  <img src="/images/travel-sydney/tower-and-birds.png" alt="窗外的教堂" width="954" height="668" loading="lazy" decoding="async">
+  <figcaption class="image-caption">窗外的教堂</figcaption>
+</figure>
 
 <h2 id="%E8%AF%BE%E5%A0%82">课堂</h2>
 
@@ -147,6 +179,17 @@ updated: 2026-05-21 23:24:40
 而这个签证申请的条件也非常有意思，需要申请人提交自己被自己的原始居住国家政府迫害的证明，只要能够证明自己在原始国家无法正常生活，个人权利被非法限制，就有机会申请到这个签证，虽然此签证的批准率极低，只有6%左右，但是每年还是有不少中国人在申请这个签证。
 
 现在想想之前国内互联网上面，有很多人在线上线下搞了很多中国政府明令禁止或者被潜规则所不允许的活动，例如反共或将政府已经隐藏的事情大肆重提，然后再趁事情爆发之前直接出国。这些人的目的我猜测有很大部分都是为了申这类的难民签证。这对于西方国家的政府来说，是个非常好的事情，因为只需要靠发出一个居留权签证，就可以搅动一个国家的政治，是个完全双赢的局面。
+
+<div class="travel-photo-grid" id="travel-chinatown-photos">
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/chinatown-kmt-building.jpg" alt="悉尼街头挂着中国国民党驻澳洲总支部招牌的大楼" width="1706" height="1279" loading="lazy" decoding="async">
+    <figcaption class="image-caption">街头随拍：国民党驻澳洲总支部大楼。</figcaption>
+  </figure>
+  <figure class="travel-photo">
+    <img src="/images/travel-sydney/chinatown-herbal-store.jpg" alt="大楼底层的中华参茸国药行，中文和英文招牌下是关闭的卷帘门" width="1706" height="1279" loading="lazy" decoding="async">
+    <figcaption class="image-caption">楼下的中华参茸国药行。</figcaption>
+  </figure>
+</div>
 
 <h3 id="power-bank">充电宝插曲</h3>
 

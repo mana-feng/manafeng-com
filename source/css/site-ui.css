@@ -43,6 +43,43 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 mark.search-word { padding: 0; color: var(--post-link-color); background: transparent; font-weight: bold; }
 .license-box .license-icon { display: none; }
 
+/* Travel photos keep their full composition; pairs stack on small screens. */
+.markdown-body .travel-photo {
+  min-width: 0;
+  margin: 1.5rem 0;
+  scroll-margin-top: 6rem;
+}
+.markdown-body .travel-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  scroll-margin-top: 6rem;
+}
+.markdown-body .travel-photo-grid .travel-photo { margin: 0; }
+.markdown-body .travel-photo > a { display: block; }
+.markdown-body .travel-photo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: .5rem;
+}
+.markdown-body .travel-photo figcaption {
+  display: block;
+  margin: .5rem 0 0;
+  color: var(--post-text-color);
+  opacity: .8;
+  font-size: .875rem;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (max-width: 575.98px) {
+  .markdown-body .travel-photo-grid { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+}
+
 /* Include the upstream TOC clipping fix without moving to an unreleased theme. */
 #toc .toc-list-item { display: block; -webkit-line-clamp: unset; overflow: visible; white-space: normal; }
 #toc .tocbot-link { overflow-wrap: anywhere; }
@@ -52,6 +89,7 @@ mark.search-word { padding: 0; color: var(--post-link-color); background: transp
   .site-category-nav { max-width: 720px; }
   article.post-content { overflow: visible; }
   .markdown-body :is(h1,h2,h3,h4,h5,h6) { scroll-margin-top: 10rem; }
+  .markdown-body .travel-photo, .markdown-body .travel-photo-grid { scroll-margin-top: 10rem; }
   .markdown-body .mobile-toc {
     display: block;
     position: sticky;
