@@ -1,6 +1,32 @@
+# Dependencies and generated website files
 node_modules/
-.DS_Store
-*.log
 /public/
-db.json
-.local-admin/
+/db.json
+/.deploy_git/
+
+# Local authoring, administration, checks and notes
+/.local-admin/
+/tests/
+/tools/
+/docs/
+/scaffolds/
+/启动本地后台.vbs
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+/.vscode/
+/.idea/
+
+# Logs, temporary files and operating-system metadata
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.lnk
+.DS_Store
+Thumbs.db
+Desktop.ini
